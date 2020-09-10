@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            {{!-- Title for students list --}}
+            <h1>{{titleStudents}}</h1>
+            {{!-- List of added students  --}}
+            <ul class="list-group">
+                {{#each students}}
+                    <li class="list-group-item">{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-6">
+            {{!-- Title for students list --}}
+            <h1>{{titleForm}}</h1>
+            {{!-- form for adding students --}}
+            <form method="post" action="students/add">
+                <div class="form-group">
+                    <input name="username" class="form-control" id="studentsName" aria-describedby="studentsName">
+                    <button type="submit" class="btn btn-primary mt-3">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
